@@ -12,7 +12,7 @@ buildscript {
 
     dependencies {
         val kotlinVersion = property("kotlinVersion") as String
-        classpath("com.android.tools.build:gradle:4.0.0")
+        classpath("com.android.tools.build:gradle:4.2.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
         classpath("io.deepmedia.tools:publisher:0.6.0")
     }
