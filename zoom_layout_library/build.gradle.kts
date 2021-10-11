@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("io.deepmedia.tools.publisher")
+    id("maven-publish")
 }
 
 android {
@@ -50,3 +51,4 @@ publisher {
     release.sources = Release.SOURCES_AUTO
     release.docs = Release.DOCS_AUTO
 }
+
