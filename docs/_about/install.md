@@ -14,7 +14,7 @@ can download the AAR package. To fetch with Gradle, make sure you add the JCente
 ```groovy
 allprojects {
   repositories {
-    jcenter()
+    //jcenter()
   }
 }
 ```

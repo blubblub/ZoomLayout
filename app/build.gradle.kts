@@ -22,8 +22,8 @@ android {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("com.google.android.exoplayer:exoplayer-core:2.9.3")
-    implementation("com.google.android.exoplayer:exoplayer-ui:2.9.3")
-    implementation("com.otaliastudios.opengl:egloo:0.4.0")
+    implementation("com.google.android.exoplayer:exoplayer-core:2.15.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.15.1")
+    implementation("com.otaliastudios.opengl:egloo:0.6.1")
     implementation(project(":library"))
 }
