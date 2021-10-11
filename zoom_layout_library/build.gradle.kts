@@ -19,9 +19,17 @@ android {
     }
 
     buildTypes {
+        get("release").minifyEnabled(false)
         get("release").consumerProguardFile("proguard-rules.pro")
+
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
 }
+
 
 dependencies {
     val kotlinVersion = property("kotlinVersion") as String
@@ -52,3 +60,15 @@ publisher {
     release.docs = Release.DOCS_AUTO
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release"){
+                from(components["release"])
+                groupId = "com.github.blubblub"
+                artifactId = "ZoomLayout"
+                version = "1.9"
+            }
+        }
+    }
+}
