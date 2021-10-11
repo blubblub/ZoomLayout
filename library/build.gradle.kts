@@ -19,15 +19,18 @@ android {
     }
 
     buildTypes {
-        get("release").minifyEnabled(false)
         get("release").consumerProguardFile("proguard-rules.pro")
-
     }
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/INDEX.LIST")
+        exclude("META-INF/library_release.kotlin_module")
+    }
 }
 
 

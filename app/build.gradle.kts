@@ -18,6 +18,12 @@ android {
     compileOptions {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/INDEX.LIST")
+        exclude("META-INF/library_release.kotlin_module")
+    }
 }
 
 dependencies {
@@ -25,5 +31,5 @@ dependencies {
     implementation("com.google.android.exoplayer:exoplayer-core:2.15.1")
     implementation("com.google.android.exoplayer:exoplayer-ui:2.15.1")
     implementation("com.otaliastudios.opengl:egloo:0.6.1")
-    implementation(project(":zoom_layout_library"))
+    implementation(project(":library"))
 }
